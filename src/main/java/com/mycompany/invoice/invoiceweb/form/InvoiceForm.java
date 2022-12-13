@@ -1,11 +1,16 @@
 package com.mycompany.invoice.invoiceweb.form;
 
-public class Invoice {
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+public class InvoiceForm {
     private String number;
-    @NotBlank
+
+    @NotBlank(message="le nom du client est obligatoire")
     private String customerName;
 
-    @Size(min=10,max=13)
+    @Size(min=10,max=13,message="Le numéro de commande n''a pas la bonne longueur")
     private String orderNumber;
 
     public String getNumber() {
