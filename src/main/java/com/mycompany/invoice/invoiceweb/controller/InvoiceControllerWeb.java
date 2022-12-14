@@ -66,14 +66,14 @@ public class InvoiceControllerWeb {
         return "invoice-home";
    }
     //@RequestMapping("/{id}")
-    @GetMapping("/{id}")
-    public String displayInvoice(@PathVariable("id") String number, Model model) {
+    /* @GetMapping("/{id}")
+   public String displayInvoice(@PathVariable("id") String number, Model model) {
         System.out.println("la méthode displayInvoice a été invoquée");
         model.addAttribute("invoice", invoiceService.getInvoiceByNumber(number));
-       /* ModelAndView mv = new ModelAndView("invoice-details");
-        mv.addObject("invoice", invoiceService.getInvoiceByNumber(number));*/
+       //ModelAndView mv = new ModelAndView("invoice-details");
+        //mv.addObject("invoice", invoiceService.getInvoiceByNumber(number));
         return "invoice-details";
-    }
+    }*/
 
     //@RequestMapping("/create-form")
     @GetMapping("/create-form")
