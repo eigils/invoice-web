@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/invoice")
 public class InvoiceResource {
 
@@ -28,7 +28,6 @@ public class InvoiceResource {
         return invoiceService.createInvoice(invoice);
 
     }
-
    @GetMapping
    public List<Invoice> list() {
        System.out.println("la méthode displayHome a été invoquée");
@@ -36,7 +35,7 @@ public class InvoiceResource {
    }
     //@RequestMapping("/{id}")
     @GetMapping("/{id}")
-    public Invoice getInvoice(@PathVariable("id") String number) {
+    public @ResponseBody Invoice getInvoice(@PathVariable("id") String number) {
         System.out.println("la méthode displayInvoice a été invoquée");
         return invoiceService.getInvoiceByNumber(number);
     }

@@ -30,7 +30,7 @@ public class InvoiceControllerWeb {
     }
 
     //@RequestMapping(value = "", method = RequestMethod.POST)
-    @PostMapping("")
+    @PostMapping("/create")
     public String createInvoice(@Valid @ModelAttribute InvoiceForm invoiceForm, BindingResult results) {
 
         if(results.hasErrors()) {
