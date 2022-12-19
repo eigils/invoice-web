@@ -30,13 +30,13 @@ public class InvoiceResource {
     }
    @GetMapping
    public List<Invoice> list() {
-       System.out.println("la méthode displayHome a été invoquée");
+       System.out.println("InvoiceResource (API) -> la méthode displayHome a été invoquée");
        return invoiceService.getInvoiceList();
    }
     //@RequestMapping("/{id}")
     @GetMapping("/{id}")
     public @ResponseBody Invoice getInvoice(@PathVariable("id") String number) {
-        System.out.println("la méthode displayInvoice a été invoquée");
+        System.out.println("InvoiceResource (API) -> la méthode getInvoice a été invoquée");
         return invoiceService.getInvoiceByNumber(number);
     }
 

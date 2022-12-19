@@ -58,7 +58,7 @@ public class InvoiceControllerWeb {
    //@RequestMapping("/home")
     @GetMapping("/home")
    public String displayHome(Model model) {
-       System.out.println("la méthode displayHome a été invoquée");
+       System.out.println("InvoiceControllerWeb (Controller) -> la méthode displayHome a été invoquée");
 
         model.addAttribute("invoices", invoiceService.getInvoiceList());
         /*ModelAndView mv = new ModelAndView("invoice-home");
