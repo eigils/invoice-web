@@ -4,9 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-//@EnableJdbcRepositories
+//@EnableJdbcRepositories - import implicite grâce à la dependencie spring-boot-starter-data-jdbc
+//@EnableJpaRepositories - import implicite grâce à la dependencie spring-boot-starter-data-jpa
 public class InvoiceWebApplication {
 
 	public static void main(String[] args) {
