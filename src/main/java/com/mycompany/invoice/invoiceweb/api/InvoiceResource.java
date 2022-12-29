@@ -29,7 +29,7 @@ public class InvoiceResource {
 
     }
    @GetMapping
-   public List<Invoice> list() {
+   public Iterable<Invoice> list() {
        System.out.println("InvoiceResource (API) -> la méthode displayHome a été invoquée");
        return invoiceService.getInvoiceList();
    }
